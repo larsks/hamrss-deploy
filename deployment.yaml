@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hamrss
+spec:
+  template:
+    spec:
+      containers:
+      - name: hamrss
+        image: docker.io/alpinelinux/darkhttpd:latest
+        ports:
+        - name: http
+          containerPort: 8080
